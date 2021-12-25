@@ -17,3 +17,6 @@
    - [[file:refs/ho.pdf][this one looks good too]]
 
 ** TODO implement them with [[https://realpython.com/python-testing/#writing-your-first-test][TDD in Python]]
+
+* Weird stuff
+  [[https://stackoverflow.com/questions/4535667/python-list-should-be-empty-on-class-instance-initialisation-but-its-not-why][e = Element() not resetting list]]
