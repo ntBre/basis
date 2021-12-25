@@ -1,0 +1,19 @@
+* Goal
+  learn how basis sets work and how to represent them in quantum
+  chemistry programs. maybe use this knowledge to build a quantum
+  chemistry program
+
+* Plan
+  Planning to use the [[https://github.com/CrawfordGroup/ProgrammingProjects/tree/master/Project%2303][Crawford Programming Projects]] as a starting point,
+  with Project 3, Hartree-Fock, in particular. I think I should be able
+  to reproduce their integrals if I interpret the basis sets
+  correctly. Those will be the test cases for the code
+
+** TODO figure out how to compute the integrals
+   - is it just the product or do I actually have to integrate?
+   - I think you do have to integrate, but the fact that we use
+     gaussian orbitals means there is a closed-form solution
+   - [[file:refs/goings.pdf][this is a great resource]]
+   - [[file:refs/ho.pdf][this one looks good too]]
+
+** TODO implement them with [[https://realpython.com/python-testing/#writing-your-first-test][TDD in Python]]
