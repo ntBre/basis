@@ -13,7 +13,7 @@
    - is it just the product or do I actually have to integrate?
    - I think you do have to integrate, but the fact that we use
      gaussian orbitals means there is a closed-form solution
-   - [[file:refs/goings.pdf][this is a great resource]]
+   - [[pdf:refs/goings.pdf][this is a great resource]]
    - [[file:refs/ho.pdf][this one looks good too]]
 
 ** TODO implement them with [[https://realpython.com/python-testing/#writing-your-first-test][TDD in Python]]

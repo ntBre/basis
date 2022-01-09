@@ -1,4 +1,5 @@
 import json
+import numpy as np
 
 
 class Shell:
@@ -52,6 +53,37 @@ def load_basis_set(filename):
                 ))
         elements.append(e)
     return elements
+
+
+def S(a, b):
+    return 0
+
+
+def K(ax, bx, a, b: float) -> float:
+    "ax, bx coordinates; a, b orbital exponents"
+    Qx = ax - bx
+    # alpha and beta
+    q = a*b / (a + b)
+    return np.exp(-q*Qx**2)
+
+
+def E(i, j, t: int, ax, bx, a, b: float):
+    Qx = ax - bx
+    # alpha and beta
+    q = a*b / (a + b)
+    p = a + b
+    if t < 0 or t > i+j:
+        return 0.0
+    elif i == j == t == 0:
+        return K(ax, bx, a, b)
+    elif i > 0:
+        return 1/(2*p) * E(i-1, j, t-1) \
+            - q*Qx/a * E(i-1, j, t) \
+            + (t+1) * E(i-1, j, t+1)
+    else:
+        return 1/(2*p) * E(i, j-1, t-1) \
+            - q*Qx/b * E(i, j-1, t) \
+            + (t+1) * E(i, j-1, t+1)
 
 
 elements = load_basis_set("sets/sto-3g.json")
